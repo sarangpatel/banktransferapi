@@ -1,0 +1,164 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BankTransferAPI",
+		"_postman_id": "0877df59-0461-57f2-e45a-2107fa90c881",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "transferMoney",
+			"request": {
+				"url": "http://localhost:3000/transferMoney",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fromAccountId\": 112,\n\t\"toAccountId\": 113,\n\t\"amount\":200\n}"
+				},
+				"description": "This method transfer money from one account to another."
+			},
+			"response": [
+				{
+					"id": "700014a4-594b-47ed-81e1-8c45ac60611e",
+					"name": "transferMoney",
+					"originalRequest": {
+						"url": "http://localhost:3000/transferMoney",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"fromAccountId\": 112,\n\t\"toAccountId\": 113,\n\t\"amount\":200\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "144",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 14 Dec 2020 14:10:36 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"90-W0jv9FdY3ho/el6Kzpl/L7ETLRo\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 157,
+					"body": "{\"errorCode\":0,\"message\":\"Transferred Successfully\",\"newSrcBalance\":994200,\"totalDestBalance\":1106200,\"transferedAt\":\"2020-12-14T14:10:36.341Z\"}"
+				}
+			]
+		},
+		{
+			"name": "getAccountDetail",
+			"request": {
+				"url": "http://localhost:3000/getAccountDetail/112",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "This method transfer money from one account to another."
+			},
+			"response": [
+				{
+					"id": "3dd745b5-fa3f-4af5-bc72-da062111678d",
+					"name": "getAccountDetail",
+					"originalRequest": {
+						"url": "http://localhost:3000/getAccountDetail/112",
+						"method": "GET",
+						"header": [],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "157",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 14 Dec 2020 13:36:40 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"9d-NzVBTUzVyBmX2zA7KGejvLrUzNY\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 84,
+					"body": "{\"message\":\"success\",\"data\":[{\"id\":1,\"user_id\":1,\"account_id\":112,\"balance\":1000000,\"type\":\"Savings\",\"created_on\":\"2020-12-14T12:44:52.000Z\",\"is_active\":1}]}"
+				}
+			]
+		}
+	]
+}
